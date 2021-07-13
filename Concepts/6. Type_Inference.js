@@ -19,4 +19,22 @@ when to use
                        when we want a variable of type that cant be inferred
                        when function returns any type & we need to clarify the value
 
+e.g  // when to use annotations
+
+// 1. Functions that returns 'any' type
+
+const json = '{"x": 10, "y": 20}';
+
+const coordinates = JSON.parse(json);      // here if we hover over coordinates it shows any type
+coordinates.something;   // here TS wont give any error becuse type of coordinates is 'any'
+
+
+
+//to fix that issue
+const coordinates: {x: number; y: number} = JSON.parse(json);   // now here we can see that type of coordinates is that object
+coordinates.something;    // here TS will now throw error saying "something does not exist on type {x: number; y: number}"
+
+
+
+
 2. type inference  - always
