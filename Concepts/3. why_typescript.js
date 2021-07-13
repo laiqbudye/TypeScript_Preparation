@@ -61,4 +61,30 @@ typescript code:-
 
 
 
+--------------------------------------------------------------------------------------------------------------
 
+Example 2:- 
+  
+  const id = 100;
+  const title = 'helloworld';
+  const completed = false;
+
+  
+  const logTodo = (id: number, title: string, completed: boolean) => {
+    console.log(`${id} ${title} ${completed}`)
+  }
+
+  logTodo(id, completed, title);     // here it will show error for second parameter because in function definition the second param supposd to be sring but we   
+                                     // are passing boolean 
+
+
+
+
+so to avoid above scenarios TYPESCRIPT comes in picture.
+
+
+  
+  
+  
+  
+  
