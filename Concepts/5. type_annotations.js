@@ -25,3 +25,54 @@ let nothing: undefined = undefined;
 //built in objects
 
 let now: Date = new Date();
+
+
+
+2. Array annotations
+
+
+let colors: string[] = ['red', 'blue', 'green'];    // here we cant add number or other type of data except string
+
+let myNumbers: number[] = [1,2,3,4,5]; 
+
+let random: any[] = [1, 'a', true];    // with any type we can add any typee of data
+
+
+3. classes
+
+class Car {
+
+}
+
+let car: Car = new Car();   // here we are making car of type Car.
+
+
+
+4. Object literals
+
+let point: { x: number; y: number} = {   // x & y are both of type number
+    x: 10,
+    y: 20                        // if we try to make this as string, it will throw error
+}
+
+
+
+
+
+5. functions annotation
+
+
+const logNumber: (i: number) => void = (i: number) => {
+    console.log(i);
+}
+
+// first half of example,
+
+const logNumber: (i: number) => void       // here it states that this function expecting i as number & returns nothing. (void means return nothing)
+
+
+
+
+
+
+
