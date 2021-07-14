@@ -1,0 +1,39 @@
+1. type annotations for functions
+    - code we add to tell TS what type of arguments a function will receive & what type of values it will return.
+    - works for both input args & return values
+    
+
+2. type inference for functions
+    - TS tries to figure out what type of value a function will return
+    - only works for return values
+
+
+
+//1. type annotations with functions
+
+const add = (a: number, b: number): number => {     // for input args we need specify the type, TS wont do that for us.
+    return a + b;
+}
+
+
+as per our definition type inference only works with return values so in the above example we can avoid adding return type manually.
+
+const add = (a: number, b: number) => {    
+    return a + b;      // here TS will find out return type on its own
+}   
+
+
+but in the same example lets say we accidently forgot to add return keyword
+
+const add = (a: number, b: number) => {    
+    a + b;      // here TS will assign 'void' as a return type becoz it doesnt return anything
+}  
+
+
+so to avoid such scenarios we should always add return type manually instead of depending on TS.
+
+
+
+
+
+
