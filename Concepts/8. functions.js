@@ -34,6 +34,28 @@ so to avoid such scenarios we should always add return type manually instead of 
 
 
 
+-------------------------------------------------------------------------------------------------------
+    
+Examples with function definition
+    
+ - function add(a: number, b: number): number {
+        return a + b;    
+    }
+
+--------------------------------------------------------------------------------------
+
+if we have a function that is not going to return anything then we can assign its return type as "void"
+
+Note: with void we can return null or undefined from the function.
+
+
+const logger = (message: string): void => {
+    console.log(message);                  // here this function is not returning anything, hence return type is void
+    
+    return null;
+    return undefined;                  // this is possible with void.. (only null or undefined we can return from a function with void)
+}
+
 
 
 
