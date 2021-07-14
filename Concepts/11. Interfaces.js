@@ -74,6 +74,36 @@ const oldCivic = {
 }
 
 
+--------------------------------------------------------------------------------------
+
+IMP NOTE
+
+interface Vehicle {
+    name: string;
+    year: number;
+    broken: boolean;
+}
+
+
+const oldCivic = {
+    name: 'civic',
+    year: 2000,
+    broken: true,
+    insured: false          // here insured is not interface but still TS wont throw any error as oldCivic has all keys that interface has
+
+}
+
+const printVehicle = (vehicle: Vehicle): void => {
+    console.log(`${vehicle.name}
+        ${vehicle.year}
+        ${vehicle.broken}
+        ${vehicle.insured}      // but when we try to access that variable inside code then it will throw error like Property 'insured' does not exist on type 'Vehicle'
+       `);
+}
+
+
+printVehicle(oldCivic);
+
 
 
 
