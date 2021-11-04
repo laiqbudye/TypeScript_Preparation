@@ -77,23 +77,3 @@ for (let i = 0; i < numbers.length; i++) {
 
 2. type inference  - always
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
