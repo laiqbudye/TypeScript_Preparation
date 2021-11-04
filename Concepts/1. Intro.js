@@ -2,6 +2,7 @@
 What is Typescript?
   
   Typescript = Javascript + A type System
+  - strongly typed programming language that builds on JS.
 
 
 What is type system?
@@ -19,5 +20,3 @@ here, we need to convert our typescript code into JS as browser does not underst
 
 
 Writing Typescript is the same as writing Javascript with some "extra documentation".
-           
-           
