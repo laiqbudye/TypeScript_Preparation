@@ -64,7 +64,7 @@ interface Vehicle {
     summary(): string;     // summary is a function which returns string
 } 
 
-const oldCivic = {
+const oldCivic:Vehicle = {
     name: 'civic',
     year: new Date(), 
     broken: true,
@@ -85,11 +85,11 @@ interface Vehicle {
 }
 
 
-const oldCivic = {
+const oldCivic:Vehicle = {
     name: 'civic',
     year: 2000,
     broken: true,
-    insured: false          // here insured is not interface but still TS wont throw any error as oldCivic has all keys that interface has
+    insured: false          // here it will throw an erro (Type '{ name: string; year: number; broken: true; insured: boolean; }' is not assignable to type 'Vehicle'.)
 
 }
 
